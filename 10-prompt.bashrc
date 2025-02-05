@@ -12,10 +12,16 @@ HOSTCOLOR="\[\e[38;5;227m\]"
 WORKDIRCOLOR="\[\e[38;5;231m\]"
 ENDCHARCOLOR="\[\e[38;5;47m\]"
 
-export PS1="${USERCOLOR}\u${ATCOLOR}@${HOSTCOLOR}\h ${WORKDIRCOLOR}\w ${ENDCHARCOLOR}${endchar}  \[\e[0m\]"
+export PS1="${USERCOLOR}\u${ATCOLOR}@${HOSTCOLOR}\h ${WORKDIRCOLOR}\w ${ENDCHARCOLOR}${endchar} \[\e[0m\]"
 
 unset USERCOLOR
 unset ATCOLOR
 unset HOSTCOLOR
 unset WORKDIRCOLOR
 unset ENDCHARCOLOR
+
+if [ $SHELL != "/bin/zsh" ]; then
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+    shopt -s checkwinsize
+fi
