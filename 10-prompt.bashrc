@@ -1,6 +1,7 @@
 # modified from solus gnome edition
 # https://getsol.us
 
+
 endchar="\$"
 if [ "$UID" = "0" ]; then
     endchar="#"
