@@ -6,7 +6,7 @@ shopt -s dotglob
 bind 'TAB':menu-complete
 bind "set completion-ignore-case on"
 bind "set colored-stats on"
-export PROMPT_COMMAND="history -a; history -c; history -r $PROMPT_COMMAND"
+export PROMPT_COMMAND="history -a"
 export HISTCONTROL="ignoreboth:erasedups"
 export HISTSIZE=15000
 export HISTIGNORE="&:[bf]g:[ \t]:* --help:*activate:*reboot*:*shutdown*:source*"
